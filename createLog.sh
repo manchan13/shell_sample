@@ -10,6 +10,11 @@ DATE="$(date +'%m%d')"
 LOG_ERR="log/err${DATE}.log"
 LOG="log/log${DATE}.log"
 
+#######################################
+# error message.
+# Arguments:
+#   None
+#######################################
 err() {
   echo "[$(date +'%Y-%m-%dT%H:%M:%S%z')]: $*" >> ${LOG_ERR}
 }
@@ -27,6 +32,6 @@ fi
 #メッセージをログに出力
 echo "$1" >> ${LOG}
 
-
 echo "終了:$(date)" >> ${LOG}
 
+exit 0

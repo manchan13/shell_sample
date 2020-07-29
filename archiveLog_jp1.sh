@@ -27,6 +27,7 @@ if [[ ${NUM_LINE} -gt 0 ]]; then
   done
 else
   echo "ERROR: More than ${ARCHIVE_DAYS} days before the file does not exist !!"
+  exit 1
 fi
 
 # 指定日数より古いアーカイブファイルを削除
